@@ -40,11 +40,11 @@ class _AppscreenState extends State<Appscreen> {
     return Scaffold(
         backgroundColor: Colors.black,
         body: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(35.0),
           child: Column(
             children: [
               const CircleAvatar(
-                radius: 75,
+                radius: 65,
                 backgroundColor: Colors.white,
                 child: Text(
                   'QUIZ',
@@ -57,7 +57,7 @@ class _AppscreenState extends State<Appscreen> {
               const SizedBox(height: 20),
               Image.asset(
                 'imaages/app.png',
-                height: 350,
+                height: 250,
               ),
               const SizedBox(height: 40),
               const Row(
@@ -121,7 +121,7 @@ class _AppscreenState extends State<Appscreen> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color.fromARGB(255, 114, 70, 208),
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 115, vertical: 10),
+                      const EdgeInsets.symmetric(horizontal: 110, vertical: 7),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18),
                   ),

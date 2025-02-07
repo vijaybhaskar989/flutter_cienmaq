@@ -1,14 +1,16 @@
+// ooru peru bhairavakona
+
 import 'package:flutter/material.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 
-class QuizScreen extends StatefulWidget {
-  const QuizScreen({super.key});
+class Horrorquiz1 extends StatefulWidget {
+  const Horrorquiz1({super.key});
 
   @override
-  State<QuizScreen> createState() => _QuizScreenState();
+  State<Horrorquiz1> createState() => _Horrorquiz1State();
 }
 
-class _QuizScreenState extends State<QuizScreen> {
+class _Horrorquiz1State extends State<Horrorquiz1> {
   final CountDownController _timerController = CountDownController();
   bool isAnswered = false;
   bool isTimeUp = false;
@@ -17,18 +19,52 @@ class _QuizScreenState extends State<QuizScreen> {
 
   List<Map<String, dynamic>> questions = [
     {
-      "question":
-          "Which Telugu movie became the first Indian film to win an Oscar in the 'Best Original Song' category?",
-      "options": ["A) RRR", "B) Baahubali", "C) Pushpa", "D) KGF"],
-      "correctAnswerIndex": 0
+      "question": "Who plays the lead role in Ooru Peru Bhairavakona?",
+      "options": [
+        "A) Sree Vishnu",
+        "B) Nani",
+        "C) Sai Dharam Tej",
+        "D) Sundeep Kishan"
+      ],
+      "correctAnswerIndex": 3
     },
     {
-      "question": "Who directed the movie RRR?",
+      "question": "Who directed  Ooru Peru Bhairavakona?",
       "options": [
-        "A) S.S. Rajamouli",
-        "B) Trivikram Srinivas",
-        "C) Bobby",
-        "D) Loki"
+        "A) Sudheer Varma",
+        "B) Sai Rajesh",
+        "C) G. Nageswara Reddy",
+        "D) Vi Anand"
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "question": "Who female Ooru Peru Bhairavakona in movie ?",
+      "options": [
+        "A) Samantha ",
+        "B) Pooja",
+        "C) Varasha Bollamma",
+        "D) Kajal"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "question": "Who composed the music for Ooru Peru Bhairavakona?",
+      "options": [
+        "A) Thaman S ",
+        "B) Sai Kartheek",
+        "C) Shekar Chandra",
+        "D) Mickey J. Meyer"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "question": "Who produced Raju Gari Gadhi 3?",
+      "options": [
+        "A) Razesh Danda  ",
+        "B) Dil Raju",
+        "C) Allu Aravind",
+        "D) Suresh Babu"
       ],
       "correctAnswerIndex": 0
     },
@@ -131,7 +167,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       initialDuration: 0,
                       controller: _timerController,
                       width: 80,
-                      height: 70,
+                      height: 100,
                       ringColor: Colors.grey[300]!,
                       fillColor: isAnswered
                           ? (selectedAnswer == correctAnswerIndex
@@ -225,8 +261,8 @@ class _QuizScreenState extends State<QuizScreen> {
                                             : Icons.radio_button_unchecked))
                                     : Icons.radio_button_unchecked,
                                 color: isAnswered
-                                    ? (isCorrect ? Colors.white : Colors.black)
-                                    : Colors.white,
+                                    ? (isCorrect ? Colors.white : Colors.red)
+                                    : Colors.black54,
                                 size: 20,
                               ),
                             ],

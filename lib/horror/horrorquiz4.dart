@@ -1,14 +1,16 @@
+//kachana
+
 import 'package:flutter/material.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 
-class QuizScreen extends StatefulWidget {
-  const QuizScreen({super.key});
+class Horrorquiz4 extends StatefulWidget {
+  const Horrorquiz4({super.key});
 
   @override
-  State<QuizScreen> createState() => _QuizScreenState();
+  State<Horrorquiz4> createState() => _Horrorquiz4State();
 }
 
-class _QuizScreenState extends State<QuizScreen> {
+class _Horrorquiz4State extends State<Horrorquiz4> {
   final CountDownController _timerController = CountDownController();
   bool isAnswered = false;
   bool isTimeUp = false;
@@ -18,19 +20,40 @@ class _QuizScreenState extends State<QuizScreen> {
   List<Map<String, dynamic>> questions = [
     {
       "question":
-          "Which Telugu movie became the first Indian film to win an Oscar in the 'Best Original Song' category?",
-      "options": ["A) RRR", "B) Baahubali", "C) Pushpa", "D) KGF"],
+          "What is the name of Raghava Lawrence's character in Kanchana?",
+      "options": ["A) Arjun", "B) Raghava", "C) Kanchana", "D) Shiva"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "question": "Who is the director of the movie Kanchana?",
+      "options": [
+        "A) Shankar",
+        "B) Raghava Lawrence",
+        "C) Atlee",
+        "D) Vetrimaaran"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "question": "What is Raghava afraid of the most in the movie?",
+      "options": ["A) Water", "B) Darkness", "C) Ghosts", "D) Heights"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "question": "Who composed the music for Kanchana?",
+      "options": [
+        "A) Thaman S ",
+        "B) B. Ajaneesh Loknath",
+        "C) Shekar Chandra",
+        "D) DSP"
+      ],
       "correctAnswerIndex": 0
     },
     {
-      "question": "Who directed the movie RRR?",
-      "options": [
-        "A) S.S. Rajamouli",
-        "B) Trivikram Srinivas",
-        "C) Bobby",
-        "D) Loki"
-      ],
-      "correctAnswerIndex": 0
+      "question":
+          "What is the name of the character played by Raghava Lawrence in Kanchana?",
+      "options": ["A) Raji", "B) Surya", "C) Raghava", "D) Shiva"],
+      "correctAnswerIndex": 2
     },
   ];
 
@@ -131,7 +154,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       initialDuration: 0,
                       controller: _timerController,
                       width: 80,
-                      height: 70,
+                      height: 100,
                       ringColor: Colors.grey[300]!,
                       fillColor: isAnswered
                           ? (selectedAnswer == correctAnswerIndex
@@ -225,8 +248,8 @@ class _QuizScreenState extends State<QuizScreen> {
                                             : Icons.radio_button_unchecked))
                                     : Icons.radio_button_unchecked,
                                 color: isAnswered
-                                    ? (isCorrect ? Colors.white : Colors.black)
-                                    : Colors.white,
+                                    ? (isCorrect ? Colors.white : Colors.red)
+                                    : Colors.black54,
                                 size: 20,
                               ),
                             ],

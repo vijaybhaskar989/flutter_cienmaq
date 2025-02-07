@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cienmaq/home/home.dart';
 import 'package:flutter_cienmaq/movies/moviescreen.dart';
 import 'package:flutter_cienmaq/news/newsscreen.dart';
 import 'package:flutter_cienmaq/profile/profilescreen.dart';
@@ -14,7 +15,7 @@ class Bottomscreen extends StatefulWidget {
 class _BottomscreenState extends State<Bottomscreen> {
   int currentIndex = 0;
   final List<Widget> screens = [
-    Moviescreen(),
+    const Home(),
     NewsScreen(),
     Homescreen(),
     Moviescreen(),

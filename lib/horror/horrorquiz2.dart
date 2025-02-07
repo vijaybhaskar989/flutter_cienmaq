@@ -1,14 +1,16 @@
+//taxiwala
+
 import 'package:flutter/material.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 
-class QuizScreen extends StatefulWidget {
-  const QuizScreen({super.key});
+class Horrorquiz2 extends StatefulWidget {
+  const Horrorquiz2({super.key});
 
   @override
-  State<QuizScreen> createState() => _QuizScreenState();
+  State<Horrorquiz2> createState() => _Horrorquiz2State();
 }
 
-class _QuizScreenState extends State<QuizScreen> {
+class _Horrorquiz2State extends State<Horrorquiz2> {
   final CountDownController _timerController = CountDownController();
   bool isAnswered = false;
   bool isTimeUp = false;
@@ -17,20 +19,50 @@ class _QuizScreenState extends State<QuizScreen> {
 
   List<Map<String, dynamic>> questions = [
     {
-      "question":
-          "Which Telugu movie became the first Indian film to win an Oscar in the 'Best Original Song' category?",
-      "options": ["A) RRR", "B) Baahubali", "C) Pushpa", "D) KGF"],
+      "question": "Who plays the lead role in Taxiwala?",
+      "options": [
+        "A) Vijay Deverakonda",
+        "B) Nani",
+        "C) Sai Dharam Tej",
+        "D) Ram Pothineni"
+      ],
       "correctAnswerIndex": 0
     },
     {
-      "question": "Who directed the movie RRR?",
+      "question": "Who directed  Taxiwala?",
       "options": [
-        "A) S.S. Rajamouli",
-        "B) Trivikram Srinivas",
-        "C) Bobby",
-        "D) Loki"
+        "A) Dill Raju",
+        "B) Rahul Sankrityan",
+        "C) G. Nageswara Reddy",
+        "D) Vi Anand"
       ],
-      "correctAnswerIndex": 0
+      "correctAnswerIndex": 1
+    },
+    {
+      "question": "Who is the female Taxiwala in movie ?",
+      "options": [
+        "A) Rashmika Mandanna ",
+        "B) Priyanka Jawalkar",
+        "C) Varasha Bollamma",
+        "D) Shruti Haasan"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "question": "Who composed the music for Taxiwala?",
+      "options": [
+        "A) Thaman S ",
+        "B) Jakes Bejoy",
+        "C) Shekar Chandra",
+        "D) DSP"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "question":
+          "What is the name of the character played by Vijay Deverakonda in Taxiwala?",
+      "options": ["A) Raji", "B) Vijay", "C) Sai", "D) Shiva"],
+      "correctAnswerIndex": 3
     },
   ];
 
@@ -131,7 +163,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       initialDuration: 0,
                       controller: _timerController,
                       width: 80,
-                      height: 70,
+                      height: 100,
                       ringColor: Colors.grey[300]!,
                       fillColor: isAnswered
                           ? (selectedAnswer == correctAnswerIndex
@@ -225,8 +257,8 @@ class _QuizScreenState extends State<QuizScreen> {
                                             : Icons.radio_button_unchecked))
                                     : Icons.radio_button_unchecked,
                                 color: isAnswered
-                                    ? (isCorrect ? Colors.white : Colors.black)
-                                    : Colors.white,
+                                    ? (isCorrect ? Colors.white : Colors.red)
+                                    : Colors.black54,
                                 size: 20,
                               ),
                             ],

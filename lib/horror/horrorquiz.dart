@@ -1,14 +1,16 @@
+//raju gari gandhi 3
+
 import 'package:flutter/material.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 
-class QuizScreen extends StatefulWidget {
-  const QuizScreen({super.key});
+class Horrorquiz extends StatefulWidget {
+  const Horrorquiz({super.key});
 
   @override
-  State<QuizScreen> createState() => _QuizScreenState();
+  State<Horrorquiz> createState() => _HorrorquizState();
 }
 
-class _QuizScreenState extends State<QuizScreen> {
+class _HorrorquizState extends State<Horrorquiz> {
   final CountDownController _timerController = CountDownController();
   bool isAnswered = false;
   bool isTimeUp = false;
@@ -17,18 +19,47 @@ class _QuizScreenState extends State<QuizScreen> {
 
   List<Map<String, dynamic>> questions = [
     {
-      "question":
-          "Which Telugu movie became the first Indian film to win an Oscar in the 'Best Original Song' category?",
-      "options": ["A) RRR", "B) Baahubali", "C) Pushpa", "D) KGF"],
+      "question": "Who is the lead actor in Raju Gari Gadhi 3?",
+      "options": [
+        "A) Ashwin Babu",
+        "B) Raj Tarun",
+        "C) Sudheer Babu",
+        "D) Nani"
+      ],
       "correctAnswerIndex": 0
     },
     {
-      "question": "Who directed the movie RRR?",
+      "question": "Who directed Raju Gari Gadhi 3?",
       "options": [
-        "A) S.S. Rajamouli",
-        "B) Trivikram Srinivas",
-        "C) Bobby",
-        "D) Loki"
+        "A) Omkar",
+        "B) Maruthi Dasari",
+        "C) Anil Ravipudi",
+        "D) Anil Ravipudi"
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "question": "What is the name of Ashwin's character in the film?",
+      "options": ["A) Karthik ", "B) Ashwin", "C) Arjun", "D) Anand"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "question": "Who composed the music for Raju Gari Gadhi 3?",
+      "options": [
+        "A) Thaman S ",
+        "B) Sai Kartheek",
+        "C) Anup Rubens",
+        "D) Mickey J. Meyer"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "question": "Who produced Raju Gari Gadhi 3?",
+      "options": [
+        "A) Omkar  ",
+        "B) Dil Raju",
+        "C) Allu Aravind",
+        "D) Suresh Babu"
       ],
       "correctAnswerIndex": 0
     },
@@ -116,7 +147,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 ),
               ],
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 05),
             Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
@@ -131,7 +162,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       initialDuration: 0,
                       controller: _timerController,
                       width: 80,
-                      height: 70,
+                      height: 100,
                       ringColor: Colors.grey[300]!,
                       fillColor: isAnswered
                           ? (selectedAnswer == correctAnswerIndex
@@ -172,7 +203,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 20),
                   Text(
                     question["question"],
                     textAlign: TextAlign.left,
@@ -225,8 +256,8 @@ class _QuizScreenState extends State<QuizScreen> {
                                             : Icons.radio_button_unchecked))
                                     : Icons.radio_button_unchecked,
                                 color: isAnswered
-                                    ? (isCorrect ? Colors.white : Colors.black)
-                                    : Colors.white,
+                                    ? (isCorrect ? Colors.white : Colors.red)
+                                    : Colors.black54,
                                 size: 20,
                               ),
                             ],

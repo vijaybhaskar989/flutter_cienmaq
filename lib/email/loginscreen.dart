@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cienmaq/app/appscreen.dart';
 import 'package:flutter_cienmaq/splash/splashscreen.dart';
 
 class Loginscreen extends StatefulWidget {
@@ -23,6 +22,10 @@ class _LoginscreenState extends State<Loginscreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              CircleAvatar(
+                backgroundImage: AssetImage('imaages/company.png'),
+                radius: 85,
+              ),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -32,7 +35,7 @@ class _LoginscreenState extends State<Loginscreen> {
                       "Login",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 35,
+                        fontSize: 45,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -40,8 +43,8 @@ class _LoginscreenState extends State<Loginscreen> {
                 ],
               ),
               Container(
-                height: 300,
-                width: 350,
+                height: 350,
+                width: 750,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 29, 29, 29),
                   borderRadius: BorderRadius.circular(18),
@@ -50,13 +53,6 @@ class _LoginscreenState extends State<Loginscreen> {
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     children: [
-                      const Text(
-                        "JHON Dow\nJhon doe @gamil.com",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold),
-                      ),
                       const SizedBox(
                         height: 15,
                       ),

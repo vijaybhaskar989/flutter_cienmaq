@@ -1,14 +1,16 @@
+//Virupaksha
+
 import 'package:flutter/material.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 
-class QuizScreen extends StatefulWidget {
-  const QuizScreen({super.key});
+class Horrorquiz3 extends StatefulWidget {
+  const Horrorquiz3({super.key});
 
   @override
-  State<QuizScreen> createState() => _QuizScreenState();
+  State<Horrorquiz3> createState() => _Horrorquiz3State();
 }
 
-class _QuizScreenState extends State<QuizScreen> {
+class _Horrorquiz3State extends State<Horrorquiz3> {
   final CountDownController _timerController = CountDownController();
   bool isAnswered = false;
   bool isTimeUp = false;
@@ -17,20 +19,50 @@ class _QuizScreenState extends State<QuizScreen> {
 
   List<Map<String, dynamic>> questions = [
     {
-      "question":
-          "Which Telugu movie became the first Indian film to win an Oscar in the 'Best Original Song' category?",
-      "options": ["A) RRR", "B) Baahubali", "C) Pushpa", "D) KGF"],
+      "question": "Who plays the lead role in Virupaksha?",
+      "options": [
+        "A) Vijay Deverakonda",
+        "B) Nani",
+        "C) Sai Dharam Tej",
+        "D) Ram Pothineni"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "question": "Who directed  Virupaksha?",
+      "options": [
+        "A) Dill Raju",
+        "B) Rahul Sankrityan",
+        "C) G. Nageswara Reddy",
+        "D) Karthik Varma Dandu"
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "question": "Who is the female Virupaksha in movie ?",
+      "options": [
+        "A) Samyuktha ",
+        "B) Priyanka Jawalkar",
+        "C) Varasha Bollamma",
+        "D) Shruti Haasan"
+      ],
       "correctAnswerIndex": 0
     },
     {
-      "question": "Who directed the movie RRR?",
+      "question": "Who composed the music for Virupaksha?",
       "options": [
-        "A) S.S. Rajamouli",
-        "B) Trivikram Srinivas",
-        "C) Bobby",
-        "D) Loki"
+        "A) Thaman S ",
+        "B) B. Ajaneesh Loknath",
+        "C) Shekar Chandra",
+        "D) DSP"
       ],
-      "correctAnswerIndex": 0
+      "correctAnswerIndex": 1
+    },
+    {
+      "question":
+          "What is the name of the character played by Sai Dharam Tej  in Virupaksha?",
+      "options": ["A) Raji", "B) Surya", "C) Sai", "D) Shiva"],
+      "correctAnswerIndex": 1
     },
   ];
 
@@ -131,7 +163,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       initialDuration: 0,
                       controller: _timerController,
                       width: 80,
-                      height: 70,
+                      height: 100,
                       ringColor: Colors.grey[300]!,
                       fillColor: isAnswered
                           ? (selectedAnswer == correctAnswerIndex
@@ -225,8 +257,8 @@ class _QuizScreenState extends State<QuizScreen> {
                                             : Icons.radio_button_unchecked))
                                     : Icons.radio_button_unchecked,
                                 color: isAnswered
-                                    ? (isCorrect ? Colors.white : Colors.black)
-                                    : Colors.white,
+                                    ? (isCorrect ? Colors.white : Colors.red)
+                                    : Colors.black54,
                                 size: 20,
                               ),
                             ],

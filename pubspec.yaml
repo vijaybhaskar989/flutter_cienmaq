@@ -7,12 +7,14 @@ environment:
   sdk: ^3.5.4
 
 dependencies:
+  circular_countdown_timer: ^0.2.4
   flutter:
     sdk: flutter
   flutter_rating_bar: ^4.0.1
   flutter_swiper_null_safety_flutter3: ^4.0.3
   http: ^1.3.0
   image_picker: ^1.1.2
+  intl: ^0.20.2
 
 dev_dependencies:
   flutter_test:
@@ -41,4 +43,52 @@ flutter:
    - imaages/games.png
    - imaages/paid.png
    - imaages/play.png
+   - imaages/p.png
+   - imaages/a.png
+   - imaages/n.png
+   - imaages/r.png
+   - imaages/ram.png
+   - imaages/c.png
+   - imaages/s.png
+   - imaages/v.png
+   - imaages/sahoo female.png
+   - imaages/sa.png
+   - imaages/pooja.png
+   - imaages/kajal.png
+   - imaages/an.png
+   - imaages/trisha.png
+   - imaages/kreethi.png
+   - imaages/comdey2.png
+   - imaages/comdey.png
+   - imaages/ali.png
+   - imaages/comdey4.png
+   - imaages/comdey3.png
+   - imaages/comdey5.png
+   - imaages/ravi.png
+   - imaages/f3.png
+   - imaages/sai tej.png
+   - imaages/geetanjali.png
+   - imaages/ooru.png
+   - imaages/taxiwala.png
+   - imaages/raju.png
+   - imaages/kachana.png
+   - imaages/colourphoto.png
+   - imaages/sitarama.png
+   - imaages/baby.png
+   - imaages/pushpa 2.png
+   - imaages/devara.png
+   - imaages/kalki.png
+   - imaages/company.png
+   - imaages/go.png
+   - imaages/oka.png
+   - imaages/smart.png
+   - imaages/avatar.png
+   - imaages/rrr.png
+   - imaages/m.png
+   - imaages/q.png
+   - imaages/all.png
+   - imaages/vamshi.png
+   - imaages/score.png
+
+  
 

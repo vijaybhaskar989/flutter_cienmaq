@@ -51,7 +51,7 @@ class _RatesscreenState extends State<Ratesscreen> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color.fromARGB(255, 45, 129, 105),
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 125, vertical: 10),
+                    const EdgeInsets.symmetric(horizontal: 105, vertical: 10),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),

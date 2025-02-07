@@ -48,7 +48,7 @@ class ReviewScreen extends StatelessWidget {
               style: TextStyle(fontSize: 16, color: Colors.white),
               textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 390),
+            const SizedBox(height: 280),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(context,
@@ -57,7 +57,7 @@ class ReviewScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color.fromARGB(255, 45, 129, 105),
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 125, vertical: 10),
+                    const EdgeInsets.symmetric(horizontal: 105, vertical: 10),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
